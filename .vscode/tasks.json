@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "order-api-build",
+        "command": "dotnet",
+        "type": "shell",
+        "args": [
+          "build",
+          "${workspaceFolder}/Order.Api/Order.Api.csproj"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "payment-api-build",
+        "command": "dotnet",
+        "type": "shell",
+        "args": [
+          "build",
+          "${workspaceFolder}/Payment.Api/Payment.Api.csproj"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+    ]
+  }
+  

@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "compound",
+            "configurations": [
+                "order-api",
+                "payment-api",
+            ]
+        }
+    ],
+    "configurations": [
+        {
+            "name": "order-api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "order-api-build",
+            "program": "${workspaceFolder}/Order.Api/bin/Debug/net7.0/Order.Api.dll",
+            "args": [
+                "--environment",
+                "Development"
+            ],
+            "cwd": "${workspaceFolder}/Order.Api",
+        },
+        {
+            "name": "payment-api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "payment-api-build",
+            "program": "${workspaceFolder}/Payment.Api/bin/Debug/net7.0/Payment.Api.dll",
+            "args": [
+                "--environment",
+                "Development"
+            ],
+            "cwd": "${workspaceFolder}/Payment.Api",
+        },
+    ]
+}
